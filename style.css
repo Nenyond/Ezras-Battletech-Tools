@@ -1,0 +1,58 @@
+* {
+    text-align: center;
+    color: white;
+    margin: 1em auto;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(19, 17, 26);
+    max-width: 90%;
+}
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+button {
+    background-color: rgb(19, 17, 26);
+    width: 20%;
+    aspect-ratio: 1;
+}
+
+button:active {
+    transform: scale(.9);
+}
+
+#about { /*type styling for info blocks, used on Change Log, and about pages*/
+    width: fit-content;
+    padding: 0 1em 1em;
+    display: block;
+    border: 4px double white;
+}
+
+.small button { /*Global small button styling, invoked at DIV level by .small*/
+    width: 5em;
+}
+
+.scatter {
+    display: flex;
+    place-content: center;
+}
+
+img { /*stlyes the scatter display*/
+    width: 90%;
+    transition: .5s ease;
+    border-radius: 50%;
+    transform: rotate(-90deg);
+}
+
+#dist { /*style for the distance overlay on the scatter display*/
+    background-color: transparent;
+    position: absolute;
+    z-index: 10;
+}
+
+ul li {
+    text-align: left;
+}

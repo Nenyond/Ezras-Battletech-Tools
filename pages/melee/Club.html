@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Tools</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/javascript.js"></script>
+</head>
+<body>
+    <h4>Ezra's Battletech Tools</h4>
+    <p>Finding a Club in Rubble</p>
+    <div class="small">
+        <button onclick="clubFind(7)">Medium</button>
+        <button onclick="clubFind(6)">Heavy</button>
+        <button onclick="clubFind(5)">Hardened</button>
+    </div>
+    <p id="girder">Suitable Girder:</p>
+    <p>Weight of Clubbing Mech</p>
+    <label for="clubweight" id="massDisplay">50</label>
+    <div>
+        <input type="range" name="mass" id="clubRange" min="20" max="100" step="5" value="50" style="width: 75%;">
+    </div>
+    <div>
+        <button onclick="getClubby('mekleft', 1)">Club (left)</button>
+        <button onclick="getClubby('mekfront', 1)">Club (front)</button>
+        <button onclick="getCLubby('mekright', 1)">Club (right)</button>
+    </div>
+    <p id="clubHit">Club Results:</p>
+
+    <script>
+    const WeightSlider = document.getElementById("clubRange");
+    const WeightDisplay = document.getElementById("massDisplay");
+
+    WeightSlider.addEventListener("input", function() {
+    WeightDisplay.textContent = WeightSlider.value;
+    });
+    </script>
+</body>
+</html>

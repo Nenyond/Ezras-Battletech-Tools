@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SATOR</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../javascript.js"></script>
+</head>
+<body>
+    <h4>Ezra's Battletech Tools</h4>
+    <p>click/tap buttons to add to SATOR</p>
+    <p><i>this calc isn't smart, it will allow you to add anything -ez</i></p>
+    <p>Skill</p>
+<div class="small">
+    <button onclick="GATOR(2)">2</button>
+    <button onclick="GATOR(3)">3</button>
+    <button onclick="GATOR(4)">4</button>
+    <button onclick="GATOR(5)">5</button>
+</div>
+<p>Attacker Movement Modifiers</p>
+<div class="small">
+    <button onclick="GATOR(2)">Jumping</button>
+    <button onclick="GATOR(-1)">Stand still</button>
+</div>
+<p>Target Movement Modifiers</p>
+<div class="small">
+    <button onclick="GATOR(1)">TMM:1</button>
+    <button onclick="GATOR(2)">TMM:2</button>
+    <button onclick="GATOR(3)">TMM:3</button>
+    <button onclick="GATOR(4)">TMM:4</button>
+    <button onclick="GATOR(5)">TMM:5</button>
+    <button onclick="GATOR(1)">Jumping</button>
+    <button onclick="GATOR(-4)">Immobile</button>
+</div>
+<p>Terrain Modifiers</p>
+<div class="small">
+    <button onclick="GATOR(1)">Woods</button>
+    <button onclick="GATOR(1)">Partial Cover</button>
+</div>
+<p>Attack Type Modifiers</p>
+<div class="small">
+    <button onclick="GATOR(1)">AoE</button>
+    <button onclick="GATOR(1)">Indirect</button>
+    <button onclick="GATOR(-1)">Indirect<br>w/TAG</button>
+    <button onclick="GATOR(1)">Spotting</button>
+    <button onclick="GATOR(1)">REAR SPA</button>
+    <button onclick="GATOR(2)">Fire Conrol Hit</button>
+    <button onclick="GATOR(1)">HEAT:1</button>
+    <button onclick="GATOR(2)">HEAT:2</button>
+    <button onclick="GATOR(3)">HEAT:3</button>
+</div>
+<p>Target is:</p>
+<div class="small">
+    <button onclick="GATOR(2)">Aero</button>
+    <button onclick="GATOR(1)">VTOL</button>
+    <button onclick="GATOR(1)">Battle Armor</button>
+    <button onclick="GATOR(1)">Hull Down</button>
+    <button onclick="GATOR(1)">Proto</button>
+</div>
+<p>Range Modifiers</p>
+<div class="small">
+    <button onclick="GATOR(0)">Short</button>
+    <button onclick="GATOR(2)">Medium</button>
+    <button onclick="GATOR(4)">Long</button>
+    <button onclick="GATOR(6)">Extreme</button>
+</div>
+<div>
+    <h3 id="gator">SATOR:</h3>
+</div>
+<div class="small">
+    <button onClick="satorReset()">reset</button>
+</div>
+<div class="small">
+    <button onclick="window.location.href='../home.html'">Home</button>
+    <button onclick="window.location.href='../AlphaStrike.html'">Alpha Strike Tools</button>
+    <button onclick="window.location.href='./ASToHit.html'">Next (To Hit)</button>
+</div>
+
+<script>
+    let gator = 0;
+    
+    function satorReset () {
+        gator = 0
+        document.getElementById("gator").textContent = "SATOR:"
+    }
+
+</script>
+    
+</body>
+</html>

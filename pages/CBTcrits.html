@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Critical Hits</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../javascript.js"></script>
+</head>
+<body>
+    <h4>Ezra's Battletech Tools</h4>
+    <p>Critical Confirmation</p>
+    <div>
+        <button onClick="CBTcrit()">Crit<br>Check</button>       
+    </div>
+    <h4 id="crit"> Critical Hit:</h4>
+    <p>Internal Structure (Biped)</p>
+    <div class="small">
+        <button onclick="CBTInternal1('Head')">Head</button>
+        <button onClick="CBTInternal2('Arm')">Arm</button>
+        <button onclick="CBTInternal2('Side')">Side Torso</button>
+        <button onclick="CBTInternal2('Center')">Center Torso</button>
+        <button onclick="CBTInternal1('Leg')">Leg</button>
+    </div>
+    <h4 id="internal">Critical Location:</h4>
+    <div class="small">
+        <button onclick="window.location.href='../home.html'">Home</button>
+        <button onclick="window.location.href='../Classic.html'">Classic Tools</button>
+        <button onclick="window.location.href='./hitlocs.html'">Previous (Hit Locations)</button>
+    </div>
+
+</body>
+</html>

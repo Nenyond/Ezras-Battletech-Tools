@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilot Skill Rolls</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../javascript.js"></script>
+</head>
+<body>
+    <h3>Ezra's Battletech Tools</h3>
+    <h4>Piloting Skill Rolls</h4>
+    <p>Piloting Sill</p>
+    <div class="small">
+        <button onclick="PSR(3)">3</button>
+        <button onclick="PSR(4)">4</button>
+        <button onclick="PSR(5)">5</button>
+        <button onclick="PSR(6)">6</button>
+    </div>
+    <p>Unit Actions <i>(also prompt PSRs)</i></p>
+    <div class="small">
+        <button onclick="PSR(0)">Missed Kick</button>
+        <button onclick="PSR(2)">Charged</button>
+        <button onclick="PSR(4)">DFA</button>
+        <button onclick="PSR(-1)">D1 Water</button>
+        <button onclick="PSR(0)">D2 Water</button>
+        <button onclick="PSR(1)">D3+ Water</button>
+        <button onclick="PSR(0)">Standing Up</button>
+        <button onclick="PSR(0)">Rubble</button>        
+    </div>
+    <p>Damage to Mech this turn. <i>(prompts PSR)</i></p>
+    <div class="small">
+        <button onclick="PSR(1)">20+ Damage</button>
+        <button onclick="PSR(3)">Shut Down</button>
+        <button onclick="PSR(1)">Leg/Foot Actuator</button>
+        <button onclick="PSR(2)">Hip Actuator</button>
+        <button onclick="PSR(3)">Gyro Hit</button>
+    </div>
+    <p>Carryover Damage</p>
+    <div class="small">
+        <button onclick="PSR(1)">Leg/Foot Actuator</button>
+        <button onclick="PSR(2)">Hip Actuator</button>
+        <button onclick="PSR(3)">Gyro Hit</button>
+        <button onclick="PSR(5)">Leg Destroyed</button>
+    </div>
+    <p>Skidding, Hexes moved</p>
+    <div class="small">
+        <button onclick="PSR(-1)">0-2</button>
+        <button onclick="PSR(0)">3-4</button>
+        <button onclick="PSR(1)">5-7</button>
+        <button onclick="PSR(2)">8-10</button>
+        <button onclick="PSR(4)">11-17</button>
+        <button onclick="PSR(5)">18-24</button>
+        <button onclick="PSR(6)">25+</button>
+    </div>
+    <p>Special Cases</p>
+    <div class="small">
+        <button onclick="PSR(-2)">Quad</button>
+        <button onclick="PSR(3)">Oops Charge</button>
+        <button onclick="PSR(1)">Small Cockpit</button>
+    </div>
+    <p>Avoiding Mechwarrior damage after a fall, in levels</p>
+    <div class="small">
+        <button onclick="PSR(1)">2</button>
+        <button onclick="PSR(2)">3</button>
+        <button onclick="PSR(3)">4</button>
+        <button onclick="PSR(4)">5</button>
+        <button onclick="PSR(5)">6</button>
+        <button onclick="PSR(6)">7</button>
+    </div>
+    <div>
+    <p>Click button to roll</p>
+    <button id="psr" onclick="PSRcheck()">PSR Target: Roll!
+    </button>
+    </div>
+    <div class="small">
+        <p id="psrRoll">PSR Roll:</p>
+        <button onclick="psrReset()">Reset</button>
+    </div>
+    <div class="small">
+        <button onclick="window.location.href='../home.html'">Home</button>
+        <button onclick="window.location.href='../Classic.html'">Classic Tools</button>
+        <button onclick="window.location.href='./Falling.html'">Next (Falling)</button>
+    </div>
+    <script>
+        let psr = 0;
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punch Tools</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/javascript.js"></script>
+</head>
+<body>
+    <h4>Ezra's Battletech Tools</h4>
+    <p>Punching Mech's Weight</p>
+    <label for="weight" id="massDisplay">50</label>
+    <div>
+        <input type="range" name="weight" id="weight" min="20" max="100" step="5" value="50" style="width: 75%;">
+    </div>
+    <p>damage calculator</p>
+    <p><i>(whether undamaged, or damaged/missing one or both actuators in the punching arm.)</i></p>
+    <div class="small">
+        <button onclick="punch(1, 'left')">Undam, left side</button>
+        <button onclick="punch(1, 'front')">Undam, front/ rear</button>
+        <button onclick="punch(1, 'right')">Undam, right</button>
+    </div>
+    <div class="small">
+        <button onclick="punch(2, 'left')">One, left side</button>
+        <button onclick="punch(2, 'front')">One, front/ rear</button>
+        <button onclick="punch(2, 'right')">One, right</button>
+    </div>
+    <div class="small">
+        <button onclick="punch(4, 'left')">Both, left side</button>
+        <button onclick="punch(4, 'front')">Both, front/ rear</button>
+        <button onclick="punch(4, 'right')">Both, right</button>
+    </div>
+    <p id="punchResult">Punch results:</p>
+
+    <div class="small">
+        <button onclick="window.location.href='/home.html'">Home</button>
+        <button onclick="window.location.href='/Classic.html'">Classic Battletech Tools</button>
+        <button onclick="window.location.href='/pages/Melee.html'">Melee Tools</button>
+        <button onclick="window.location.href='./MToHit.html'">Previous (to Hit)</button>
+        <button onclick="window.location.href='../CBTcrits.html'">Next (Criticals)</button>
+
+    </div>
+
+    <script>
+    const WeightSlider = document.getElementById("weight");
+    const WeightDisplay = document.getElementById("massDisplay");
+
+    WeightSlider.addEventListener("input", function() {
+    WeightDisplay.textContent = WeightSlider.value;
+    });
+    </script>
+</body>
+</html>

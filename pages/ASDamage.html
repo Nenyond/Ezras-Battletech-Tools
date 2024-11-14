@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AS Damage</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../javascript.js"></script>
+</head>
+<body>
+
+    <h4>Ezra's Battletech Tools</h4>
+    <p><i>This tool is intended to be used alongside the optional <br>
+    Variable Damage Rolls rule on pg. 174 of <br>
+    of the Commander's Edition of Alpha Strike. </i></p>
+    <div>
+        <button onclick="ASDamage(2)">2</button>
+        <button onclick="ASDamage(3)">3</button>
+        <button onclick="ASDamage(4)">4</button>
+        <button onclick="ASDamage(5)">5</button>
+        <button onclick="ASDamage(6)">6</button>
+        <button onclick="ASDamage(7)">7</button>
+        <button onclick="ASDamage(8)">8</button>
+        <button onclick="ASDamage(9)">9</button>
+        <button onclick="ASDamage(10)">10</button>
+        <button onclick="ASDamage(11)">11</button>
+        <button onclick="ASDamage(12)">12</button>
+        <button onclick="ASDamage(15)">15</button>
+    </div>
+    <p id="damage">Total Damage:</p>
+    <div>
+        <button onclick="ASPartial()">Partial</button>
+    </div>
+    <p id="partial"></p>
+    <div class="small">
+        <button onclick="window.location.href='../home.html'">Home</button>
+        <button onclick="window.location.href='../AlphaStrike.html'">Alpha Strike Tools</button>
+        <button onclick="window.location.href='../pages/ASToHit.html'">Previous (To Hit)</button>
+        <button onclick="window.location.href='../pages/ASCritical.html'">Next (Criticals)</button>
+    </div>
+</body>
+</html>

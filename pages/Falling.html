@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falling Tools</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../javascript.js"></script>
+</head>
+<body>
+    <h3>Ezra's Battletech Tools</h3>
+    <h4>Falling and Facing after a Fall</h4>
+    <p>Falling</p>
+    <p>Falling Mech's weight</p>
+    <label for="mass" id="weight">50</label>
+    <div>
+        <input type="range" name="mass" id="weightRange" min="20" max="100" value="50" step="5" style="width: 75%;">
+    </div>
+    <p>Fall Height, in levels</p>
+    <label for="fall" id="fall">0</label>
+    <div>
+        <input type="range" name="fall" id="fallRange" min="0" max="10" value="0" step="1" style="width: 75%;">
+    </div>
+    <div>
+        <button onclick="fallMek()">Fall Down</button>
+    </div>
+    <p id="fallResult">Fall Results:</p>
+    <div class="small">
+        <button onclick="window.location.href='../home.html'">Home</button>
+        <button onclick="window.location.href='../Classic.html'">Classic Tools</button>
+        <button onclick="window.location.href='./PSR.html'">Previous (PSR)</button>
+    </div>
+
+    <script>
+        const WeightSlider = document.getElementById("weightRange");
+        const WeightDisplay = document.getElementById("weight");
+
+    WeightSlider.addEventListener("input", function() {
+    WeightDisplay.textContent = WeightSlider.value;
+    });
+
+    const fallSlider = document.getElementById("fallRange");
+    const fallDisplay = document.getElementById("fall");
+
+    fallSlider.addEventListener("input", function() {
+    fallDisplay.textContent = fallSlider.value;
+    });
+    </script>
+</body>
+</html>

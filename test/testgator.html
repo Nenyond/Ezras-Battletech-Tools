@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./button.css">
+</head>
+<body>
+    <h2>Ezra's Battletech Tools</h2>
+    <p>click buttons to add to GATOR</p>
+    <h4>Gunnery Skill</h4>
+    <div>
+        <form autocomplete="off">
+        <label class="container">2
+            <input type="radio" name="Skill" value="2" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">3
+            <input type="radio" name="Skill" value="3" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">4
+            <input type="radio" name="Skill" value="4" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">5
+            <input type="radio" name="Skill" value="5" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">6
+            <input type="radio" name="Skill" value="6" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+    </form>
+    </div>
+    <h4>Attacker Movement Mods</h4>
+    <div>
+        <form autocomplete="off">
+        <label class="container">Standstill
+            <input type="radio" name="selfMove" value="0" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">Walk
+        <input type="radio" name="selfMove" value="1" onchange="updateGATOR(this)">
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">Run
+            <input type="radio" name="selfMove" value="2" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">Jump
+            <input type="radio" name="selfMove" value="3" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">Prone
+            <input type="radio" name="selfMove" value="4" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        </form>
+    </div>
+    <h4>Target Movement Mods</h4>
+    <div>
+        <form autocomplete="off">
+        <label class="container">0-2
+            <input type="radio" name="targMove" value="0" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">3-4
+        <input type="radio" name="targMove" value="1" onchange="updateGATOR(this)">
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">5-6
+            <input type="radio" name="targMove" value="2" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">7-9
+            <input type="radio" name="targMove" value="3" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">10-17
+            <input type="radio" name="targMove" value="4" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">18-24
+            <input type="radio" name="targMove" value="5" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">25+
+            <input type="radio" name="targMove" value="6" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">Immobile
+            <input type="radio" name="targMove" value="-4" onchange="updateGATOR(this)"> 
+            <span class="checkmark"></span>
+        </label> <br>
+        <label class="container">Prone (adjacent)
+            <input type="radio" name="prone" value="-2" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">Prone (not adjacent)
+            <input type="radio" name="prone" value="1" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">Un-Prone
+            <input type="radio" name="prone" value="0" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label><br>
+        Jump <label class="switch">
+            <input type="checkbox" name="jump" value="1"  onchange="updateGATOR(this)">
+            <span class="slider"></span>
+        </label>
+        </form>
+    </div>
+    <h4>Terrain</h4>
+    <div>
+        <form autocomplete="off">
+        Light Woods <label class="switch">
+            <input type="checkbox" name="wood1" value="1" onchange="updateGATOR(this)">
+            <span class="slider"></span>
+        </label>
+        Light Woods <label class="switch">
+            <input type="checkbox" name="wood2" value="1" onchange="updateGATOR(this)">
+            <span class="slider"></span>
+        </label><br>
+        Heavy Woods <label class="switch">
+            <input type="checkbox" name="hwood" value="2" onchange="updateGATOR(this)">
+            <span class="slider"></span>
+        </label> <br>
+        <label class="container">Not in Woods
+            <input type="radio" name="woods" value="0" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label> 
+        <label class="container">In Light Woods
+            <input type="radio" name="woods" value="1" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label> 
+        <label class="container">In Heavy Woods
+            <input type="radio" name="woods" value="2" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label> <br>
+        Partial Cover <label class="switch">
+            <input type="checkbox" name="cover" value="1" onchange="updateGATOR(this)">
+            <span class="slider"></span>
+        </label>
+        </form>
+    </div>
+    <h4>Heat Effects</h4>
+    <div>
+        <form autocomplete="off">
+        <label class="container">0-7
+            <input type="radio" name="heat" value="0" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">8-12
+            <input type="radio" name="heat" value="1" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">13-16
+            <input type="radio" name="heat" value="2" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">17-23
+            <input type="radio" name="heat" value="3" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">24+
+            <input type="radio" name="heat" value="4" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        </form>
+    </div>
+    <h4>Range Mods</h4>
+    <div>
+        <form autocomplete="off">
+        <label class="container">Short
+            <input type="radio" name="range" value="0" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">Medium
+            <input type="radio" name="range" value="2" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">Long
+            <input type="radio" name="range" value="4" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label><br>
+        <h4>Minimum Range</h4>
+        <p><i>hexes inside minimum</i></p>
+        <label class="container">0
+            <input type="radio" name="min" value="0" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">1
+            <input type="radio" name="min" value="1" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">2
+            <input type="radio" name="min" value="2" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">3
+            <input type="radio" name="min" value="3" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">4
+            <input type="radio" name="min" value="4" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">5
+            <input type="radio" name="min" value="5" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">6
+            <input type="radio" name="min" value="6" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+    </form>
+    </div>
+    <h4>Misc Mods</h4>
+    <div>
+        <form autocomplete="off">
+        Indirect LRM <label class="switch">
+            <input type="checkbox" name="indirect" value="1" onchange="updateGATOR(this)">
+            <span class="slider"></span>
+        </label> <br>
+        <label class="container">Primary Target
+            <input type="radio" name="secondary" value="0" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">Secondary Target (front)
+            <input type="radio" name="secondary" value="1" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">Secondary Target (side/rear)
+            <input type="radio" name="secondary" value="2" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label><br>
+        Sensor Hit <label class="switch">
+            <input type="checkbox" name="sensor" value="2" onchange="updateGATOR(this)">
+            <span class="slider"></span>
+        </label> <br>
+        Shoulder Damage <label class="switch">
+            <input type="checkbox" name="shoulder" value="4" onchange="updateGATOR(this)">
+            <span class="slider"></span>
+        </label> <br>
+        Upper Arm Actuator Hit <label class="switch">
+            <input type="checkbox" name="upper" value="1" onchange="updateGATOR(this)">
+            <span class="slider"></span>
+        </label> <br>
+        Lower Arm Actuator Hit <label class="switch">
+            <input type="checkbox" name="lower" value="1" onchange="updateGATOR(this)">
+            <span class="slider"></span>
+        </label>
+        <br>
+        <label class="container">Default Weapon
+            <input type="radio" name="Weapon" value="0" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">Heavy Laser
+            <input type="radio" name="Weapon" value="1" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">Pulse Laser
+            <input type="radio" name="Weapon" value="-2" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">Rocket Launcher
+            <input type="radio" name="Weapon" value="1" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">MRM
+            <input type="radio" name="Weapon" value="1" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">LBX firing Cluster
+            <input type="radio" name="Weapon" value="-1" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">NARC SRM/LRM
+            <input type="radio" name="Weapon" value="-1" onchange="updateGATOR(this)">
+            <span class="checkmark"></span>
+        </label><br>
+        Targeting Comp <label class="switch" onchange="updateGATOR(this)">
+            <input type="checkbox" name="comp" value="-1">
+            <span class="slider"></span>
+        </label> 
+        </form>
+    </div>
+    <div class="result">
+        <p>GATOR: <span id="gator">0</span></p>
+        <p>To Hit Result: <span id="hit">0</span></p>
+    </div>
+    <div class="small">
+        <button onclick="ToHit()">Roll To Hit</button>
+        <button onClick="window.location.href='./testgator.html'">reset</button>
+    </div>
+    <div class="small">
+        <button onclick="window.location.href='../home.html'">Home</button>
+        <button onclick="window.location.href='../Classic.html'">Classic Tools</button>
+        <button onclick="window.location.href='../pages/CBTToHit.html'">Next (To Hit)</button>
+    </div>
+
+    <script>
+        function Bones () {
+            let d1 = Math.floor(Math.random() * 6) + 1;
+            let d2 = Math.floor(Math.random() * 6) + 1;
+
+            return (
+                d1 + d2
+            )
+        }
+
+        function updateGATOR (radio) {
+            let gator = 0;
+            const cats = ["Skill", "selfMove", "targMove", "prone", "woods", "heat", "range", "min", "Weapon", "secondary", "jump", "wood1", "wood2", "hwood", "cover", "indirect", "sensor", "shoulder", "upper", "lower", "comp"];
+
+            cats.forEach(category => {
+                const selected = document.querySelector(`input[name="${category}"]:checked`);
+                if (selected) {
+                    gator += parseFloat(selected.value)
+                }
+            })
+            console.log(gator)
+            return document.getElementById("gator").innerHTML = gator
+        }
+
+        function ToHit()  {
+            let target = document.getElementById("gator").innerHTML
+            const Swing = Bones()
+            const Hit = `${Swing}, Hit.`
+            const Miss = `${Swing}, Miss.`
+
+            if (Swing >= target)
+                return document.getElementById('hit').innerHTML = Hit;
+            else
+                return document.getElementById('hit').innerHTML = Miss;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cluster hits</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../javascript.js"></script>
+</head>
+<body>
+    <h4>Ezra's Battletech Tools</h4>
+    <p>Cluster Hits</p>
+
+    <label for="clusterRange">Select Cluster Type:</label>
+    <div>
+        <input type="range" id="clusterRange" min="0" max="11" step="1" value="0" oninput="updateClusterType(this.value)" style="width: 75%;">
+    </div>
+    <p id="clusterValue">C2</p>
+    <p style="font-size: small;"><i>Will only output a value for valid Cluster Column selections. ie, don't expect a value for HAG5.</i></p>
+    <div class="small">
+        <button onclick="Cluster(clusterType)">Roll Cluster Hits</button>
+        <button onclick="HAGL(clusterType)">HAG Short</button>
+        <button onclick="HAGS(clusterType)">HAG Long</button>
+        <button onclick="Narc(clusterType)">NARC/ Artemis IV</button>
+    </div>
+    <p>Cluster Hits:</p><p id="clusters">o</p>
+    <!--<p>Type of Munition</p>
+    <div class="small">
+        <button onclick="groupings(5)">LRM</button>
+        <button onclick="groupings(1)">SRM</button>
+        <button onclick="groupings(1)">LBX Cluster</button>
+        <button onclick="groupings(5)">MRM</button>
+        <button onclick="groupings(5)">HAG</button>
+    </div>
+    <p id="hitGroups">Total Cluster Groups:</p>-->
+    <div class="small">
+        <button onclick="window.location.href='../home.html'">Home</button>
+        <button onclick="window.location.href='../Classic.html'">Classic Tools</button>
+        <button onclick="window.location.href='./CBTToHit.html'">Previous (To Hit)</button>
+        <button onclick="window.location.href='./hitlocs.html'">Next (Hit Location)</button>
+    </div>    
+    
+</body>
+</html>
